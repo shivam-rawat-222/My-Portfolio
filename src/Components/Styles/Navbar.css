@@ -1,0 +1,19 @@
+.nav {
+    background: rgba(8, 3, 3, 0.2);
+    z-index: 2;
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border-radius: 10px;
+
+
+
+
+
+
+
+
+}
+
+/* .logo {
+    filter: brightness(100%);
+} */
