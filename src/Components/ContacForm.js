@@ -51,7 +51,7 @@ function ContacForm() {
     e.preventDefault();
     const { name, email, message } = data
 
-    const response = await fetch("/Contact/new", {
+    const response = await fetch("https://shivambackend.vercel.app/Contact/new", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

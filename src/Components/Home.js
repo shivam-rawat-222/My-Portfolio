@@ -1,10 +1,13 @@
 import { Flex, Image, Text, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
+import { useColorMode } from '@chakra-ui/react'
 import "./Styles/Homeimage.css"
 import { AiOutlineCloudDownload } from "react-icons/ai";
 import { Button } from '@chakra-ui/react'
 export default function Home() {
+    const { colorMode } = useColorMode()
     function downloadFile(url, filename) {
+
 
         fetch(url)
             .then((response) => {
@@ -38,7 +41,7 @@ export default function Home() {
     const val = "<Web Developer/>"
     // const { colorMode, toggleColorMode } = useColorMode();
     return (
-        <Flex id="home">
+        <Flex id="home" bgColor={colorMode == "dark" ? "#000" : "white"}>
             <Flex w="60%" h="100vh" alignItems="center" justifyContent="center">
                 <Flex pos="absolute" left="1px" mb="80px"><Text fontSize="160px" fontWeight="bold" opacity={0.07} >RAWAT</Text></Flex>
                 <Flex flexDir="column" h="40%" justifyContent="center" pos="absolute">
@@ -46,7 +49,7 @@ export default function Home() {
                     <Flex ><Text fontSize="45px" fontFamily="Inter" fontWeight="bold"   >I AM <Text display="inline" color="#137DC6" fontWeight="bold">SHIVAM RAWAT</Text></Text></Flex>
                     <Flex ><Text fontSize="40px" fontWeight="semibold" >{val}</Text></Flex>
 
-                    <Flex mt="20px"><Button border="2px solid black" onClick={() => { downloadFile("/download", "shivam_resume.pdf") }}>Resume <Flex mt="4px" ml="8px"><AiOutlineCloudDownload size="30px" /></Flex></Button></Flex>
+                    <Flex mt="20px"><Button border="2px solid black" onClick={() => { downloadFile("https://shivambackend.vercel.app/download", "shivam_resume.pdf") }}>Resume <Flex mt="4px" ml="8px"><AiOutlineCloudDownload size="30px" /></Flex></Button></Flex>
                 </Flex>
 
 
