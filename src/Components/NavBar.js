@@ -15,25 +15,34 @@ export default function NavBar() {
 
 
     return (
-        <Flex flexDir="row" justifyContent="space-between" alignItems="center" pos="fixed" w="100%" zIndex="2" bgColor={colorMode == "dark" ? "#0d1117" : "white"}>
-            {/* <Flex w="xs" justifyContent="center"  ><Image src='./Images/logo.png' pt="20px" className='logo' /></Flex>
-            <Flex flexDir="row" w="3xl" justifyContent="space-evenly" >
-                <Flex alignItems="center" w="sm" justifyContent="space-evenly" fontWeight="semibold" fontSize="lg">
+        <Flex flexDir="row" justifyContent="space-between" alignItems="center" pos="fixed" w="100%" zIndex="2" bgColor={colorMode == "dark" ? "#0d1117" : "white"} >
+
+            <Flex justifyContent="center" pos="relative" left={{ base: "10px", md: "30px", lg: "40px" }}><Image src='./Images/logo.png' filter={colorMode == "light" ? "brightness(0%)" : "brightness(90%)"} pt="20px" className='logo' /></Flex>
+
+
+            <Flex flexDir="row" justifyContent="center" >
+
+                <Flex alignItems="center" w="3xl" justifyContent="space-evenly" fontWeight="semibold" fontSize="lg" display={{ base: "none", md: "none", lg: "flex" }} >
                     <Link >Home</Link>
                     <Link>About</Link>
                     <Link >Skills</Link>
                     <Link >Experience</Link>
-
+                    <Button colorScheme='blue' ml="50px" ><Text fontSize="lg" >Contact Us</Text></Button>
                 </Flex>
-                <Button colorScheme='blue' ><Text fontSize="lg" >Contact Us</Text></Button>
-               
+
+                <Flex pos="relative" right={{ base: "10px", md: "30px", lg: "50px" }}><ColorModeSwitcher justifySelf="flex-end" /></Flex>
+
+
+            </Flex>
 
 
 
 
 
-            </Flex> */}
-            <ColorModeSwitcher justifySelf="flex-end" />
+
+
+
+
         </Flex>
     )
 }
