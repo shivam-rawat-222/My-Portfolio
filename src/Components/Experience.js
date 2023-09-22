@@ -8,7 +8,7 @@ export default function Experience() {
             <Flex w="100%" h="10%" justifyContent="center" alignItems="center">
                 <Flex fontSize="3rem"><Text>Experience.Here()</Text></Flex>
             </Flex>
-            
+
             <Flex h="70%" mt="100px" >
                 <Tabs variant="unstyled" display="flex" w="100%" flexDir="row-reverse">
                     <TabList position="flex" flexDir="column" w="40%" fontSize="2rem" >
@@ -31,7 +31,7 @@ export default function Experience() {
                                 </Flex>
                                 <Flex w="100%" h="100%" >
                                     <Flex w="40%" h="100%" justifyContent="center" alignItems="center">
-                                        <Image h="15rem" src='./images/internship/banyan.png' />
+                                        <Image h="15rem" src='./Images/internship/banyan.png' />
 
 
                                     </Flex>
@@ -62,7 +62,7 @@ export default function Experience() {
                                 </Flex>
                                 <Flex w="100%" h="100%" >
                                     <Flex w="40%" h="100%" justifyContent="center" alignItems="center">
-                                        <Image h="20rem" src='./images/internship/tech.jpg' borderRadius="20px" />
+                                        <Image h="20rem" src='./Images/internship/tech.jpg' borderRadius="20px" />
 
 
                                     </Flex>
@@ -90,7 +90,7 @@ export default function Experience() {
                                 </Flex>
                                 <Flex w="100%" h="100%" >
                                     <Flex w="40%" h="100%" justifyContent="center" alignItems="center">
-                                        <Image h="20rem" src='./images/internship/learn.jpg' borderRadius="20px" />
+                                        <Image h="20rem" src='./Images/internship/learn.jpg' borderRadius="20px" />
 
 
                                     </Flex>

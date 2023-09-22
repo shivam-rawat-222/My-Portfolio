@@ -53,7 +53,7 @@ export default function Home() {
 
             </Flex>
             <Flex alignItems="center" h="80vh" >
-                <Image src='./Images/Home.png' className='backlight' />
+                <Image src='./Images/home.png' className='backlight' />
             </Flex>
         </Flex >
     )

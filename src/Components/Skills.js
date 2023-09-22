@@ -40,7 +40,7 @@ export default function Skills() {
                         <Grid templateColumns='repeat(2, 0.1fr)' gap={30}>
                             <SkillsCard logo="./Images/languages/Html.png" name="HTML" />
 
-                            <SkillsCard logo="./Images/languages/css.png" name="CSS" />
+                            <SkillsCard logo="./Images/languages/Css.png" name="CSS" />
                             <SkillsCard logo="./Images/languages/js.png" name="JavaScript" />
                             <SkillsCard logo="./Images/languages/cpp.png" name="C++" />
                             <SkillsCard logo="./Images/languages/java.png" name="java" />
