@@ -15,8 +15,8 @@ export default function NavBar() {
 
 
     return (
-        <Flex flexDir="row" justifyContent="space-between" alignItems="center" pos="fixed" w="100%" zIndex="2" bgColor={colorMode == "dark" ? "#000" : "white"}>
-            <Flex w="xs" justifyContent="center"  ><Image src='./Images/logo.png' pt="20px" className='logo' /></Flex>
+        <Flex flexDir="row" justifyContent="space-between" alignItems="center" pos="fixed" w="100%" zIndex="2" bgColor={colorMode == "dark" ? "#0d1117" : "white"}>
+            {/* <Flex w="xs" justifyContent="center"  ><Image src='./Images/logo.png' pt="20px" className='logo' /></Flex>
             <Flex flexDir="row" w="3xl" justifyContent="space-evenly" >
                 <Flex alignItems="center" w="sm" justifyContent="space-evenly" fontWeight="semibold" fontSize="lg">
                     <Link >Home</Link>
@@ -26,13 +26,14 @@ export default function NavBar() {
 
                 </Flex>
                 <Button colorScheme='blue' ><Text fontSize="lg" >Contact Us</Text></Button>
-                <ColorModeSwitcher justifySelf="flex-end" />
+               
 
 
 
 
 
-            </Flex>
+            </Flex> */}
+            <ColorModeSwitcher justifySelf="flex-end" />
         </Flex>
     )
 }

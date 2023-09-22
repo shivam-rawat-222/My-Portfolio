@@ -14,11 +14,11 @@ export default function Mainweb() {
             <Box>
                 <NavBar />
                 <Home />
-                <About />
-                <Skills />
-                <ContacForm />
+                {/* <About /> */}
+                {/* <Skills /> */}
+                {/* <ContacForm /> */}
 
-                <Experience />
+                {/* <Experience /> */}
             </Box>
         </>
 

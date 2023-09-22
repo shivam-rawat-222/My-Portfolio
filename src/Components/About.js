@@ -1,8 +1,11 @@
 import React from 'react'
+import { useColorMode } from '@chakra-ui/react'
 import { Flex, Text, Image, HStack } from '@chakra-ui/react'
 export default function About() {
+
+    const { colorMode } = useColorMode()
     return (
-        <Flex mb="15rem" id="about" h="100vh" alignItems="center">
+        <Flex mb="15rem" id="about" h="100vh" alignItems="center" bgColor={colorMode == "dark" ? "#0d1117" : "white"}>
             <Flex w="100%" justifyContent="center"  >
                 <Image src='./Images/about.png' paddingTop="10px" h="30rem"></Image>
             </Flex>
