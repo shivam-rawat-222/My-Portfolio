@@ -15,7 +15,7 @@ export default function NavBar() {
 
 
     return (
-        <Flex flexDir="row" justifyContent="space-between" alignItems="center" pos="fixed" w="100%" zIndex="2" bgColor={colorMode == "dark" ? "#0d1117" : "white"} >
+        <Flex flexDir="row" justifyContent="space-between" alignItems="center" pos="fixed" w="100%" zIndex="2" bgColor={colorMode == "dark" ? " #121212" : "#FAF9F6"} >
 
             <Flex justifyContent="center" pos="relative" left={{ base: "10px", md: "30px", lg: "40px" }}><Image src='./Images/logo.png' filter={colorMode == "light" ? "brightness(0%)" : "brightness(90%)"} pt="20px" className='logo' /></Flex>
 

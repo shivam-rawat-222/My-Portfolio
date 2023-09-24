@@ -1,0 +1,7 @@
+.card:hover .cardglass {
+
+    top: 0%;
+    cursor: pointer;
+    transition: 0.9s;
+
+}

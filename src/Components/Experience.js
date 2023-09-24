@@ -1,11 +1,13 @@
-import { Box, Flex, Text, Image } from '@chakra-ui/react'
-import { Tabs, TabList, TabPanels, Tab, TabPanel, TabIndicator } from '@chakra-ui/react'
 import React from 'react'
+import { Flex, Image, Text, Box, Heading } from '@chakra-ui/react'
+import SkillsCard from './SkillsCard'
+import { Grid, GridItem } from '@chakra-ui/react'
 
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 export default function Experience() {
     return (
-        <Flex h="100vh" flexDir="column" id="Experience" py="5rem">
-            <Flex w="100%" h="10%" justifyContent="center" alignItems="center">
+        <Flex flexDir="column" id="Experience" py="5rem">
+            {/* <Flex w="100%" h="10%" justifyContent="center" alignItems="center">
                 <Flex fontSize="3rem"><Text>Experience.Here()</Text></Flex>
             </Flex>
 
@@ -23,7 +25,7 @@ export default function Experience() {
 
                     <TabPanels >
 
-                        {/* Tab 1  */}
+
                         <TabPanel h="100%" >
                             <Flex h="100%" flexDir="column" ml="6rem" >
                                 <Flex w="100%" justifyContent="center" alignItems="center">
@@ -52,7 +54,7 @@ export default function Experience() {
 
                             </Flex>
                         </TabPanel>
-                        {/* tab 2  */}
+
 
 
                         <TabPanel h="100%" >
@@ -82,7 +84,7 @@ export default function Experience() {
 
                             </Flex>
                         </TabPanel>
-                        {/* /TAB 3  */}
+
                         <TabPanel h="100%" >
                             <Flex h="100%" flexDir="column" ml="6rem">
                                 <Flex w="100%" justifyContent="center" h="50px" >
@@ -113,7 +115,115 @@ export default function Experience() {
                 </Tabs>
 
 
-            </Flex>
+            </Flex> */}
+
+
+
+
+            <Flex flexDir="column" >
+                <Flex justifyContent="center" >
+                    <Flex flex dir='row' alignItems="center" w="100%" justifyContent="center" mb="8rem">
+                        <Flex ><Text fontSize={{ base: "2rem", md: "2rem", lg: "3rem" }}>Internships</Text></Flex>
+
+                    </Flex>
+                </Flex>
+
+                <Flex >
+                    <Tabs isFitted variant='enclosed' w="100%">
+                        <TabList mb='1em'>
+                            <Tab fontSize={{ base: "sm", md: "2xl", lg: "3xl" }}>About</Tab>
+                            <Tab fontSize={{ base: "sm", md: "2xl", lg: "3xl" }}>Technologies</Tab>
+                            <Tab fontSize={{ base: "sm", md: "2xl", lg: "3xl" }}>What I Learn ?</Tab>
+                        </TabList>
+                        <TabPanels>
+                            <TabPanel h="100%" >
+                                <Flex h="100%" alignItems="center" mt={{ base: "1rem", md: "5rem", lg: "5rem" }}>
+
+
+                                    <Flex w={{ base: "100%", md: "100%", lg: "90%" }} h="100%" justifyContent="center" alignItems="center" flexDir={{ base: "column", md: "row", lg: "row" }}>
+                                        <Flex w="50%" h="100%" justifyContent="center" alignItems="center" >
+                                            <Image src='./Images/internship/banyan.png' boxSize={{ base: "12rem", md: "13rem", lg: "20rem" }} />
+
+
+                                        </Flex>
+                                        <Flex w={{ base: "100%", md: "50%", lg: "50%" }} >
+                                            <Flex p="2rem" fontSize={{ base: "12px", md: "14px", lg: "16px" }} h="90%" alignItems="center">
+                                                <Text>
+                                                    Digital marketing agency and training organization | Soft skills and business communication training | Career and Skill based professional courses | Software solutions | Vedic mathematics training | Education academy for competitive examinations.
+
+                                                    Management Consultation, Digital Marketing Services, Corporate Skills Training, Digital Marketing Training, Vedic Mathematics, Market Research, IELTS/TOEFL, Leadership Training, and Business Consultation <br />
+                                                    2nd Floor, 160/161, 3A, , Near Chimni Bai Dharmshala, DAV college road,NIT, Faridabad, Haryana 121001, IN
+
+
+                                                </Text>
+                                            </Flex>
+
+                                        </Flex>
+                                    </Flex>
+
+                                </Flex>
+                            </TabPanel>
+
+                            <TabPanel h="100%" >
+                                <Flex h="100%" alignItems="center" mt={{ base: "1rem", md: "5rem", lg: "5rem" }}>
+
+
+                                    <Flex w={{ base: "100%", md: "100%", lg: "90%" }} h="100%" justifyContent="center" alignItems="center" flexDir={{ base: "column", md: "row", lg: "row" }}>
+                                        <Flex w="50%" h="100%" justifyContent="center" alignItems="center" >
+                                            <Image src='./Images/internship/tech.jpg' boxSize={{ base: "12rem", md: "13rem", lg: "20rem" }} />
+
+
+                                        </Flex>
+                                        <Flex w={{ base: "100%", md: "50%", lg: "50%" }} >
+                                            <Flex p="2rem" fontSize={{ base: "12px", md: "14px", lg: "16px" }} h="90%" alignItems="center">
+                                                <Text>
+                                                    Digital marketing agency and training organization | Soft skills and business communication training | Career and Skill based professional courses | Software solutions | Vedic mathematics training | Education academy for competitive examinations.
+
+                                                    Management Consultation, Digital Marketing Services, Corporate Skills Training, Digital Marketing Training, Vedic Mathematics, Market Research, IELTS/TOEFL, Leadership Training, and Business Consultation <br />
+                                                    2nd Floor, 160/161, 3A, , Near Chimni Bai Dharmshala, DAV college road,NIT, Faridabad, Haryana 121001, IN
+
+
+                                                </Text>
+                                            </Flex>
+
+                                        </Flex>
+                                    </Flex>
+
+                                </Flex>
+                            </TabPanel>
+                            <TabPanel h="100%" >
+                                <Flex h="100%" alignItems="center" mt={{ base: "1rem", md: "5rem", lg: "5rem" }}>
+
+
+                                    <Flex w={{ base: "100%", md: "100%", lg: "90%" }} h="100%" justifyContent="center" alignItems="center" flexDir={{ base: "column", md: "row", lg: "row" }}>
+                                        <Flex w="50%" h="100%" justifyContent="center" alignItems="center" >
+                                            <Image src='./Images/internship/learn.jpg' boxSize={{ base: "12rem", md: "13rem", lg: "20rem" }} />
+
+
+                                        </Flex>
+                                        <Flex w={{ base: "100%", md: "50%", lg: "50%" }} >
+                                            <Flex p="2rem" fontSize={{ base: "12px", md: "14px", lg: "16px" }} h="90%" alignItems="center">
+                                                <Text>
+                                                    Digital marketing agency and training organization | Soft skills and business communication training | Career and Skill based professional courses | Software solutions | Vedic mathematics training | Education academy for competitive examinations.
+
+                                                    Management Consultation, Digital Marketing Services, Corporate Skills Training, Digital Marketing Training, Vedic Mathematics, Market Research, IELTS/TOEFL, Leadership Training, and Business Consultation <br />
+                                                    2nd Floor, 160/161, 3A, , Near Chimni Bai Dharmshala, DAV college road,NIT, Faridabad, Haryana 121001, IN
+
+
+                                                </Text>
+                                            </Flex>
+
+                                        </Flex>
+                                    </Flex>
+
+                                </Flex>
+                            </TabPanel>
+                        </TabPanels>
+                    </Tabs>
+                </Flex>
+
+
+            </Flex >
 
 
 

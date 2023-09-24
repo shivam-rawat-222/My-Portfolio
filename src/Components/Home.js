@@ -25,9 +25,9 @@ export default function Home() {
         shown = true;
 
     }
-    useEffect(() => {
-        inputname();
-    }, []);
+    // useEffect(() => {
+    //     inputname();
+    // }, []);
 
 
 
@@ -65,10 +65,10 @@ export default function Home() {
     }
 
     const val = "<Web Developer/>"
-    // const { colorMode, toggleColorMode } = useColorMode();
+
     // inputname();
     return (
-        <Flex id="home" bgColor={colorMode == "dark" ? "#0d1117" : "white"} flexDir={{ base: "column", md: "column", lg: "row" }} pt="80px">
+        <Flex id="home" flexDir={{ base: "column", md: "column", lg: "row" }} pt="80px">
 
             <Flex w={{ base: "full", md: "full", lg: "60%" }} h={{ base: "40vh", md: "90vh", lg: "90vh" }} alignItems="center" justifyContent="center" >
 
@@ -80,7 +80,7 @@ export default function Home() {
 
 
                 <Flex flexDir="column" justifyContent="center" pos="absolute" padding={{ base: "0px", md: "none", lg: "none" }} >
-                    <Flex fontSize={{ base: "30px", md: "50px", lg: "50px" }}><Text fontFamily="Inter" fontWeight="semibold" >HΞLLO {name}</Text></Flex>
+                    <Flex fontSize={{ base: "30px", md: "50px", lg: "50px" }}><Text fontFamily="Inter" fontWeight="semibold" color="blue.200">HΞLLO Rawat</Text></Flex>
                     <Flex fontSize={{ base: "30px", md: "50px", lg: "50px" }}><Text fontFamily="Inter" fontWeight="bold"   >I AM <Text display="inline" color="#137DC6" fontWeight="bold">SHIVAM RAWAT</Text></Text></Flex>
                     <Flex fontSize={{ base: "30px", md: "50px", lg: "50px" }} ><Text fontWeight="semibold" >{val}</Text></Flex>
 
@@ -93,7 +93,7 @@ export default function Home() {
 
 
             <Flex alignItems="center" h={{ base: "full", md: "80vh", lg: "80vh" }} justifyContent={{ base: "center", md: "center", lg: "none" }}>
-                <Image src='./Images/home.png' className='backlight' boxSize={{ base: "xs", md: "sm", lg: "sm" }} />
+                <Image src='./Images/home.png' className='backlight' boxSize={{ base: "15rem", md: "sm", lg: "sm" }} />
             </Flex>
         </Flex >
     )

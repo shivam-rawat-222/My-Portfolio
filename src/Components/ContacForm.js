@@ -2,8 +2,10 @@ import React from 'react'
 import "../Components/Styles/ContactForm.css"
 import { useState } from 'react'
 
-import { Flex, Image, Spacer, Text } from '@chakra-ui/react'
-
+import { Flex, FormControl, FormErrorMessage, FormHelperText, FormLabel, Image, Spacer, Text } from '@chakra-ui/react'
+import { Form } from 'react-router-dom'
+import { Input, Button } from '@chakra-ui/react'
+import { Textarea } from '@chakra-ui/react'
 function ContacForm() {
 
   const [userErr, setUserErr] = useState(false)
@@ -78,28 +80,50 @@ function ContacForm() {
 
 
 
-
+  let iserror = false
 
   return (
-    <Flex mt={200} className='box' >
-      <Flex flexDir="column" w="100%" h="50%" >
-        <Text fontSize="40px" fontFamily="Inter" fontWeight="bold" ml={10}>Let’s discuss  <Text fontWeight="bold">on something <Text display="inline" color="#137DC6" fontWeight="bold">cool</Text> <Text display="inline" fontWeight="bold">together!</Text> </Text></Text>
-        <Image src='./Images/contact.png' paddingTop="10px" h="65%" w='65%'></Image>
-      </Flex>
-      <Flex className='2b' w="100%" h="60vh" onSubmit={handleSubmit}>
-        <form className='form' >
-          <input id="f" className='name' type='text' placeholder='Name' required autoComplete='off' onChange={handleInput} name="name" /><br></br>{userErr ? <span>*Numbers are not allowed* </span> : ""}
-          <Spacer></Spacer>
-          <input id="f" className='email' type='email' placeholder='Email' autoComplete='off' required onChange={handleInput} name="email" />
-          <Spacer></Spacer>
-          <textarea id='f' className='mess' placeholder='Your Message' autoComplete='off' required onChange={handleInput} name="message" /><br></br>{messageErr ? <span>*Enter more than 4 characters* </span> : ""}
-          <Spacer></Spacer>
-          <input className='button' type='Submit' value="Create Connection" />
-        </form>
-      </Flex>
-    </Flex>
+
+    <Flex h="25rem" w="25rem" p="30px" borderRadius="20px" justifyContent="center">
+
+      <form >
+
+        <FormControl as="fieldset" mb="40px" w="20rem">
+
+          <Input placeholder='Full Name' variant="flushed" />
+          {iserror
+            ? <FormErrorMessage>Plz Enter Your Valid Full Name</FormErrorMessage>
+            : <FormHelperText>Plz Enter Your Full Name</FormHelperText>
+          }
+
+
+        </FormControl>
+        <FormControl as="fieldset" mb="40px">
+          <Input placeholder='Email' variant="flushed" />
+          {iserror
+            ? <FormErrorMessage>Plz Enter the valid email</FormErrorMessage>
+            : <FormHelperText>Plz Enter Your Email</FormHelperText>
+          }
+
+
+        </FormControl>
+        <FormControl as="fieldset"  >
+          <Textarea placeholder="Enter Your Meaage Here" maxH="150px" />
+
+
+        </FormControl>
+        <Flex justifyContent="center" py="20px">
+          <Button colorScheme='purple' w="15rem">Submit</Button>
+        </Flex>
+
+      </form>
+
+
+    </Flex >
+
+
+
   )
 
 }
-
 export default ContacForm

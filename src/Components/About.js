@@ -5,15 +5,15 @@ export default function About() {
 
     const { colorMode } = useColorMode()
     return (
-        <Flex mb="15rem" id="about" h="100vh" alignItems="center" bgColor={colorMode == "dark" ? "#0d1117" : "white"}>
-            <Flex w="100%" justifyContent="center"  >
-                <Image src='./Images/about.png' paddingTop="10px" h="30rem"></Image>
+        <Flex id="about" alignItems="center" bgColor={colorMode == "dark" ? "#0d1117" : "white"} flexDir={{ base: 'column', md: 'column', lg: "row" }} h="100%" my="10rem">
+            <Flex w="50%" justifyContent="center"  >
+                <Image src='./Images/about.png' paddingTop="10px" ></Image>
             </Flex>
-            <Flex flexDir="column" w="100%" >
-                <Flex><Text fontSize="70px" fontFamily="Inter" fontWeight="bold" ml={10}>Who am <Text display="inline" color="#137DC6" fontWeight="bold">I </Text><Text display="inline" fontWeight="bold">?</Text></Text></Flex>
+            <Flex flexDir="column" w="100%">
+                <Flex justifyContent="center" ><Text fontSize={{ base: '50px', md: '60px', lg: "70px" }} fontFamily="Inter" fontWeight="bold" ml={10}>Who am <Text display="inline" color="#137DC6" fontWeight="bold">I </Text><Text display="inline" fontWeight="bold">?</Text></Text></Flex>
 
-                <Flex px="20px" fontSize="16px" w="90%">
-                    <Text>
+                <Flex fontSize="16px" w="full" justifyContent=" center" >
+                    <Text fontSize={{ base: 'sm', md: 'sm', lg: "none" }} p="40px" textAlign="center" >
                         orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuri
                         orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuri
                         orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuri
@@ -22,16 +22,22 @@ export default function About() {
                     </Text>
                 </Flex>
 
-                <HStack spacing={0}>
-                    <Image h="70%" src='./Images/i.png' paddingTop="10px"></Image>
-                    <Image h="70%" src='./Images/l.png' paddingTop="10px"></Image>
-                    <Image h="70%" src='./Images/f.png' paddingTop="10px"></Image>
-                    <Image h="70%" src='./Images/b.png' paddingTop="10px"></Image>
-                    <Image h="70%" src='./Images/g.png' paddingTop="10px"></Image>
+                <HStack spacing={{ base: '5', md: '10', lg: "10" }} w="100%" display="flex" justifyContent="center" mb="20px">
+                    <Image src='./Images/media/insta.png' boxSize="2rem"></Image>
+                    <Image src='./Images/media/git.png' boxSize="2rem" ></Image>
+                    <Image src='./Images/media/linkedin.png' boxSize="2rem" ></Image>
+                    <Image src='./Images/media/g.png' boxSize="2rem" ></Image>
+                    <Image src='./Images/media/x.png' boxSize="2rem" ></Image>
+                    <Image src='./Images/media/fb.png' boxSize="2rem" ></Image>
+
+
+
+
+
                 </HStack>
             </Flex>
 
-        </Flex>
+        </Flex >
 
     )
 }
