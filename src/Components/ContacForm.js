@@ -52,7 +52,7 @@ function ContacForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, message } = data
-
+    console.log(data)
     const response = await fetch("https://shivambackend.vercel.app/Contact/new", {
       method: "POST",
       headers: {
@@ -86,11 +86,11 @@ function ContacForm() {
 
     <Flex h="25rem" w="25rem" p="30px" borderRadius="20px" justifyContent="center">
 
-      <form >
+      <form onSubmit={handleSubmit} >
 
         <FormControl as="fieldset" mb="40px" w="20rem">
 
-          <Input placeholder='Full Name' variant="flushed" />
+          <Input placeholder='Full Name' variant="flushed" name="name" onChange={handleInput} />
           {iserror
             ? <FormErrorMessage>Plz Enter Your Valid Full Name</FormErrorMessage>
             : <FormHelperText>Plz Enter Your Full Name</FormHelperText>
@@ -99,7 +99,7 @@ function ContacForm() {
 
         </FormControl>
         <FormControl as="fieldset" mb="40px">
-          <Input placeholder='Email' variant="flushed" />
+          <Input placeholder='Email' variant="flushed" name="email" onChange={handleInput} />
           {iserror
             ? <FormErrorMessage>Plz Enter the valid email</FormErrorMessage>
             : <FormHelperText>Plz Enter Your Email</FormHelperText>
@@ -108,13 +108,11 @@ function ContacForm() {
 
         </FormControl>
         <FormControl as="fieldset"  >
-          <Textarea placeholder="Enter Your Meaage Here" maxH="150px" />
+          <Textarea placeholder="Enter Your Meaage Here" name="message" maxH="150px" onChange={handleInput} />
 
 
         </FormControl>
-        <Flex justifyContent="center" py="20px">
-          <Button colorScheme='purple' w="15rem">Submit</Button>
-        </Flex>
+        <Button type="submit" colorScheme="blue">send</Button>
 
       </form>
 
