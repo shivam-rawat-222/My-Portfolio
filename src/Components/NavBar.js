@@ -23,14 +23,22 @@ export default function NavBar() {
             <Flex flexDir="row" justifyContent="center" >
 
                 <Flex alignItems="center" w="3xl" justifyContent="space-evenly" fontWeight="semibold" fontSize="lg" display={{ base: "none", md: "none", lg: "flex" }} >
-                    <Link >Home</Link>
+                    <Link><a href='/'>Home</a></Link>
                     <Link>About</Link>
                     <Link >Skills</Link>
                     <Link >Experience</Link>
-                    <Button colorScheme='blue' ml="50px" ><Text fontSize="lg" >Contact Us</Text></Button>
+                    
                 </Flex>
 
-                <Flex pos="relative" right={{ base: "10px", md: "30px", lg: "50px" }}><ColorModeSwitcher justifySelf="flex-end" /></Flex>
+                <Flex  gap="20px">
+                <Button colorScheme='blue' ml="50px" ><Text fontSize="lg" >Contact Us</Text></Button>
+                <Button  colorScheme='blue'><a href='/login'>Login</a></Button>
+               
+                <Flex pos="relative" ><ColorModeSwitcher justifySelf="flex-end" /></Flex>
+                
+                </Flex>
+
+     
 
 
             </Flex>
