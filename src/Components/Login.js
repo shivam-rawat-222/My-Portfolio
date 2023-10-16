@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ContacForm from './ContacForm'
 import { Flex, Heading, Image , Text } from '@chakra-ui/react'
 import NavBar from './NavBar'
-import { Link } from '@chakra-ui/react'
+import { Link , Button} from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { useNavigate } from 'react-router-dom'
 
@@ -18,6 +18,7 @@ import { json } from 'react-router-dom'
 export default function Login() {
     const [Gmail,setGmail] = useState(" ")
     const [password,setpassword] = useState("")
+    const [loading,setloading] = useState("false")
 let navigate = useNavigate();
 
     let handlegmail = (e)=>{
@@ -37,6 +38,7 @@ let navigate = useNavigate();
     }
 
     let handlesubmit = async(e) => {
+       
         e.preventDefault();
      
         
@@ -150,7 +152,12 @@ let navigate = useNavigate();
                                 <FormHelperText>Enter Your Password</FormHelperText>
 
                             </FormControl>
-                            <Input type='submit' bgColor="#00308F"/>
+                            {
+                            loading == "true"? <Button isLoading colorScheme='teal' variant='solid'>Button</Button>
+                            :
+                             <Input type='submit' bgColor="#00308F"/>}
+                            
+ 
 
                             
 

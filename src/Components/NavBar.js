@@ -1,6 +1,6 @@
 import { Box, Button, Flex } from '@chakra-ui/react'
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from "react-router-dom";
 
 import "./Styles/Navbar.css"
 import { useColorMode } from '@chakra-ui/react'
@@ -11,7 +11,30 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
 
 export default function NavBar() {
+    let navigate = useNavigate();
     const { colorMode } = useColorMode()
+    const [login,setlogin] = useState(false)
+    useEffect(()=>{
+        let token = localStorage.getItem("token")
+        if(token)
+        {
+            setlogin(true);
+            console.log(token)
+
+
+        }
+        else{
+            console.log("user is not logged in ")
+        }
+
+    },[])
+
+    let logoutuser = ()=>{
+        localStorage.removeItem("token");
+        setlogin(false)
+        alert("user is logged out successfully")
+        navigate("/")
+    }
 
 
     return (
@@ -32,7 +55,8 @@ export default function NavBar() {
 
                 <Flex  gap="20px">
                 <Button colorScheme='blue' ml="50px" ><Text fontSize="lg" >Contact Us</Text></Button>
-                <Button  colorScheme='blue'><a href='/login'>Login</a></Button>
+                {login ? <Button  colorScheme='blue' onClick={logoutuser}>Logout</Button> : <Button  colorScheme='blue'><a href='/login'>Login</a></Button>}
+                
                
                 <Flex pos="relative" ><ColorModeSwitcher justifySelf="flex-end" /></Flex>
                 

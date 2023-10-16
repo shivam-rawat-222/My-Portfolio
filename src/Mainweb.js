@@ -19,7 +19,7 @@ export default function Mainweb() {
 
     return (
         <>
-        <NavBar />
+        
          <Box bgColor={colorMode == "dark" ? "#0d1117" : "white"}>
            
      
@@ -29,6 +29,7 @@ export default function Mainweb() {
                 <Route exact path='/' element={
            
                 <>
+                <NavBar/>
                 <Home />
                 <About />
                 <Skills />

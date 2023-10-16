@@ -2,6 +2,7 @@ import { Flex, Image, Text, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
 import { useColorMode } from '@chakra-ui/react'
 import "./Styles/Homeimage.css"
+import { motion } from "framer-motion"
 import { AiOutlineCloudDownload } from "react-icons/ai";
 import { Button } from '@chakra-ui/react'
 import { useState, useEffect } from 'react';
@@ -80,7 +81,7 @@ export default function Home() {
 
 
                 <Flex flexDir="column" justifyContent="center" pos="absolute" padding={{ base: "0px", md: "none", lg: "none" }} >
-                    <Flex fontSize={{ base: "30px", md: "50px", lg: "50px" }}><Text fontFamily="Inter" fontWeight="semibold" color="blue.200">HΞLLO Rawat</Text></Flex>
+                    <Flex fontSize={{ base: "30px", md: "50px", lg: "50px" }}><Text fontFamily="Inter" fontWeight="semibold" color="blue.200">HΞLLO _____________</Text></Flex>
                     <Flex fontSize={{ base: "30px", md: "50px", lg: "50px" }}><Text fontFamily="Inter" fontWeight="bold"   >I AM <Text display="inline" color="#137DC6" fontWeight="bold">SHIVAM RAWAT</Text></Text></Flex>
                     <Flex fontSize={{ base: "30px", md: "50px", lg: "50px" }} ><Text fontWeight="semibold" >{val}</Text></Flex>
 
