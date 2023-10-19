@@ -8,7 +8,7 @@ export default function Skills() {
     const heading = "<Skills/>"
     return (
         <>
-            <Flex flexDir="column" id='skills' py="5rem" display={{ base: "none", md: "none", lg: "unset" }}>
+            {/* <Flex flexDir="column" id='skills' py="5rem" display={{ base: "none", md: "none", lg: "unset" }} >
                 <Flex justifyContent="center" w="100%">
                     <Flex flex dir='row' alignItems="center" mb="50px">
                         <Flex><Text fontSize={{ base: '50px', md: '60px', lg: "70px" }}>{heading}</Text></Flex>
@@ -72,22 +72,26 @@ export default function Skills() {
 
 
                 </Flex>
-            </Flex >
+            </Flex > */}
 
             {/* for mobile and tabs  */}
             {/* using chakra */}
 
 
-            <Flex flexDir="column" display={{ base: "unset", md: "unset", lg: "none" }}>
+            <Flex flexDir="column"   >
                 <Flex justifyContent="center">
                     <Flex flex dir='row' alignItems="center" w="100%" justifyContent="center">
-                        <Flex ><Text fontSize={{ base: "2rem", md: "2rem", lg: "3rem" }}>{heading}</Text></Flex>
-                        <Image src='./Images/skills.png' boxSize={{ base: "5rem", md: "8rem", lg: "10rem" }} pos="relative" bottom="10px" right={{ base: "3rem", md: "5rem", lg: "5rem" }} />
+                        <Flex >
+                            <Text fontSize={{ base: "2rem", md: "2rem", lg: "3rem" }}>{heading}</Text>
+                         
+                            </Flex>
+                            <Image src='./Images/skills.png' boxSize={{ base: "5rem", md: "8rem", lg: "10rem" }} pos="relative" bottom="10px" right={{ base: "3rem", md: "5rem", lg: "5rem" }} />
+                        
 
                     </Flex>
                 </Flex>
 
-                <Flex h={{ base: "90vh", md: "110vh", lg: "90vh" }}>
+                <Flex >
                     <Tabs isFitted variant='enclosed' w="100%">
                         <TabList mb='1em'>
                             <Tab fontSize={{ base: "sm", md: "2xl", lg: "3xl" }}>FrameWorks</Tab>

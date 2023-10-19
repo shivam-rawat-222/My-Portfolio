@@ -6,7 +6,7 @@ import { Grid, GridItem } from '@chakra-ui/react'
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 export default function Experience() {
     return (
-        <Flex flexDir="column" id="Experience" py="5rem">
+        <Flex flexDir="column" id="Experience">
             {/* <Flex w="100%" h="10%" justifyContent="center" alignItems="center">
                 <Flex fontSize="3rem"><Text>Experience.Here()</Text></Flex>
             </Flex>
@@ -122,7 +122,7 @@ export default function Experience() {
 
             <Flex flexDir="column" >
                 <Flex justifyContent="center" >
-                    <Flex flex dir='row' alignItems="center" w="100%" justifyContent="center" mb="8rem">
+                    <Flex flex dir='row' alignItems="center" w="100%" justifyContent="center" mb={{ base: "3rem", md: "8rem", lg: "8rem" }}>
                         <Flex ><Text fontSize={{ base: "2rem", md: "2rem", lg: "3rem" }}>Internships</Text></Flex>
 
                     </Flex>
@@ -142,13 +142,13 @@ export default function Experience() {
 
                                     <Flex w={{ base: "100%", md: "100%", lg: "90%" }} h="100%" justifyContent="center" alignItems="center" flexDir={{ base: "column", md: "row", lg: "row" }}>
                                         <Flex w="50%" h="100%" justifyContent="center" alignItems="center" >
-                                            <Image src='./Images/internship/banyan.png' boxSize={{ base: "12rem", md: "13rem", lg: "20rem" }} />
+                                            <Image boxSize={{ base: "10rem", md: "xs", lg: "xs" }} src='./Images/internship/banyan.webp' />
 
 
                                         </Flex>
                                         <Flex w={{ base: "100%", md: "50%", lg: "50%" }} >
                                             <Flex p="2rem" fontSize={{ base: "12px", md: "14px", lg: "16px" }} h="90%" alignItems="center">
-                                                <Text>
+                                                <Text textAlign="center">
                                                     Digital marketing agency and training organization | Soft skills and business communication training | Career and Skill based professional courses | Software solutions | Vedic mathematics training | Education academy for competitive examinations.
 
                                                     Management Consultation, Digital Marketing Services, Corporate Skills Training, Digital Marketing Training, Vedic Mathematics, Market Research, IELTS/TOEFL, Leadership Training, and Business Consultation <br />
@@ -176,7 +176,7 @@ export default function Experience() {
                                         </Flex>
                                         <Flex w={{ base: "100%", md: "50%", lg: "50%" }} >
                                             <Flex p="2rem" fontSize={{ base: "12px", md: "14px", lg: "16px" }} h="90%" alignItems="center">
-                                                <Text>
+                                                <Text textAlign="center">
                                                     Digital marketing agency and training organization | Soft skills and business communication training | Career and Skill based professional courses | Software solutions | Vedic mathematics training | Education academy for competitive examinations.
 
                                                     Management Consultation, Digital Marketing Services, Corporate Skills Training, Digital Marketing Training, Vedic Mathematics, Market Research, IELTS/TOEFL, Leadership Training, and Business Consultation <br />
@@ -203,7 +203,7 @@ export default function Experience() {
                                         </Flex>
                                         <Flex w={{ base: "100%", md: "50%", lg: "50%" }} >
                                             <Flex p="2rem" fontSize={{ base: "12px", md: "14px", lg: "16px" }} h="90%" alignItems="center">
-                                                <Text>
+                                                <Text textAlign="center">
                                                     Digital marketing agency and training organization | Soft skills and business communication training | Career and Skill based professional courses | Software solutions | Vedic mathematics training | Education academy for competitive examinations.
 
                                                     Management Consultation, Digital Marketing Services, Corporate Skills Training, Digital Marketing Training, Vedic Mathematics, Market Research, IELTS/TOEFL, Leadership Training, and Business Consultation <br />

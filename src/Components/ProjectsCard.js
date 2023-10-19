@@ -6,13 +6,15 @@ export default function ProjectsCard({ img }) {
     return (
         <Card
 
-            width={{ base: "100%", md: "100%", lg: "250px" }}
-            height={{ base: "unset", md: "350px", lg: "280px" }}
+
+            width={{ base: "200px", md: "100%", lg: "250px" }}
+            height={{ base: "200px", md: "350px", lg: "280px" }}
             boxShadow="dark-lg"
             className='card'
             overflow="hidden"
             borderRadius="20px"
             mt={{ base: "0px", md: "70px", lg: "0px" }}
+       
         >
             <Image
                 src={img}
@@ -29,12 +31,19 @@ export default function ProjectsCard({ img }) {
                 bgColor="black"
                 opacity="0.8"
                 width="full"
-                height={{ base: "350px", md: "100%", lg: "400px" }}
+                height={{ base: "300px", md: "400px", lg: "400px" }}
                 pos="absolute"
                 transition="1s"
-                top={{ base: "80%", md: "60%", lg: "70%" }}
+                top={{ base: "70%", md: "80%", lg: "70%" }}
 
             >
+                <Flex flexDir="column" h="full" >
+                    <Flex w="full"  h="20%" justifyContent="center" alignItems="center"><Text>Real Chat App</Text></Flex>
+                    <Flex  >
+                        <Text p="10px" textAlign="center" fontSize={{base:"10px",md:"md",lg:"sm"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ornare sapien ac sem auctor venenatis. Phasellus aliquet ac eni
+                            m eget mollis. Ut congue urna lacus  </Text>
+                    </Flex>
+                </Flex>
 
             </Box>
         </Card>

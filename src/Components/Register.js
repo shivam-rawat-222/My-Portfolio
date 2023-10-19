@@ -3,7 +3,7 @@ import ContacForm from './ContacForm'
 import { Flex, Heading, Image, Text } from '@chakra-ui/react'
 import NavBar from './NavBar'
 import { useNavigate } from "react-router-dom";
-
+import { useColorMode } from '@chakra-ui/react'
 import {
     FormControl,
     FormLabel,
@@ -15,6 +15,7 @@ import { Link } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 export default function Register() {
+    const { colorMode } = useColorMode()
     const navigate = useNavigate();
     const [username , setusername] = useState("")
     const [gmail , setgmail] = useState("")
@@ -77,12 +78,12 @@ export default function Register() {
     return (
         <>
 
-            <Flex bgColor="black">
-                <NavBar />
+            <Flex>
+             
                 <Flex  mt="5rem" width="full" height="calc(100vh - 5rem)" justifyContent="center" alignItems="center" gap="5rem" flexDir="row-reverse">
-                <Flex borderRadius="20px" overflow="hidden" h="50%" w="30%"><Image src='./Images/gif/register.gif'/></Flex>
-                    <Flex h="80%" w="30rem" border="10px solid #445D48" borderRadius="50px" overflow="hidden" alignItems="center" flexDir="column" justifyContent="space-evenly" >
-                        <Flex h="20%" w="full" bgColor="#445D48" justifyContent="center" alignItems="center" flexDir="column">
+                <Flex borderRadius="20px" overflow="hidden" h="50%" w="30%" display={{base:"none",md:"none",lg:"flex"}}><Image src='./Images/gif/register.gif'/></Flex>
+                    <Flex h="80%" w="30rem" border="2px solid #445D48" borderRadius="50px" overflow="hidden" alignItems="center" flexDir="column" justifyContent="space-evenly" >
+                        <Flex h="20%" w="full" justifyContent="center" alignItems="center" flexDir="column">
                             <Heading >Register</Heading>
                             <Text>or</Text>
                             <Text>Already Have An Account ? <Link href='/login'>
@@ -115,7 +116,7 @@ export default function Register() {
                                         <FormHelperText>Enter Your Password</FormHelperText>
 
                                     </FormControl>
-                                    <Input type='submit' value="Register" bgColor="#445D48"/>
+                                    <Input type='submit' value="Register" _hover={{bgColor:"#445D48", color:"white"}}  color={colorMode == "dark" ? "white" : "black"} boxShadow={colorMode == "dark" ? "white" : "1px 1px "}/>
 
 
 

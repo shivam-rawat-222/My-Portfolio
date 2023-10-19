@@ -84,11 +84,11 @@ function ContacForm() {
 
   return (
 
-    <Flex h="25rem" w="25rem" p="30px" borderRadius="20px" justifyContent="center">
+    <Flex borderRadius="20px" justifyContent="center" >
 
       <form onSubmit={handleSubmit} >
 
-        <FormControl as="fieldset" mb="40px" w="20rem">
+        <FormControl as="fieldset" mb="20px"  w={{base:"15rem",md:"20rem",lg:"20rem"}}>
 
           <Input placeholder='Full Name' variant="flushed" name="name" onChange={handleInput} />
           {iserror
@@ -98,7 +98,7 @@ function ContacForm() {
 
 
         </FormControl>
-        <FormControl as="fieldset" mb="40px">
+        <FormControl as="fieldset" mb="30px" >
           <Input placeholder='Email' variant="flushed" name="email" onChange={handleInput} />
           {iserror
             ? <FormErrorMessage>Plz Enter the valid email</FormErrorMessage>
@@ -107,12 +107,13 @@ function ContacForm() {
 
 
         </FormControl>
-        <FormControl as="fieldset"  >
+        <FormControl as="fieldset" >
           <Textarea placeholder="Enter Your Meaage Here" name="message" maxH="150px" onChange={handleInput} />
 
 
         </FormControl>
-        <Button type="submit" colorScheme="blue">send</Button>
+        <Flex  justifyContent="center"><Button m="20px" w="10rem" type="submit" colorScheme="blue">send</Button></Flex>
+        
 
       </form>
 

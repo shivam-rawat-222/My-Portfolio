@@ -5,7 +5,7 @@ import NavBar from './NavBar'
 import { Link } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { useNavigate } from 'react-router-dom'
-
+import { useColorMode } from '@chakra-ui/react'
 
 import {
     FormControl,
@@ -16,6 +16,7 @@ import {
   } from '@chakra-ui/react'
 import { json } from 'react-router-dom'
 export default function Login() {
+    const { colorMode } = useColorMode()
     const [Gmail,setGmail] = useState(" ")
     const [password,setpassword] = useState("")
 let navigate = useNavigate();
@@ -54,16 +55,18 @@ let navigate = useNavigate();
                 
             })
         }).then(async (resp)=>{
-            console.log(resp)
+           
             if(resp.status == 200)
             {
                 let token = await resp.text()
                
                 localStorage.setItem("token",token);
+               
                 
                 alert("Welcome")
 
                 navigate("/")
+                
             } else if(resp.status == 400)
             {
                 alert("enter your credentials properly")
@@ -120,14 +123,14 @@ let navigate = useNavigate();
     return (
         <>
       
-        <Flex bgColor="black">
-            <NavBar/>
-            <Flex mt="5rem" width="full" height="calc(100vh - 5rem)" justifyContent="center" alignItems="center" gap="5rem" bgColor="black">
-                <Flex ><Image src='./Images/gif/login.gif' boxSize="md"/></Flex>
+        <Flex  >
+           
+            <Flex mt="5rem" width="full" height="calc(100vh - 5rem)" justifyContent="center" alignItems="center" gap="5rem" >
+                <Flex display={{base:"none",md:"none",lg:"flex"}} ><Image src='./Images/gif/login.gif' boxSize="md"/></Flex>
             
                     
-                <Flex h="80%" w="30rem" borderRadius="50px" overflow="hidden" border="10px solid #00308F" alignItems="center" flexDir="column" justifyContent="space-evenly" >
-                    <Flex h="20%" w="full"  bgColor="#00308F" justifyContent="center" alignItems="center" flexDir="column">
+                <Flex h="80%" w="30rem" borderRadius="50px" overflow="hidden" border="2px solid #00308F" alignItems="center" flexDir="column" justifyContent="space-evenly" >
+                    <Flex h="20%" w="full"   justifyContent="center" alignItems="center" flexDir="column">
                     <Heading >Login Here</Heading>
                     <Text pos="relative"  bottom="-10px" display="block"  textAlign="center">or <Link href="/register"> Register  <ExternalLinkIcon mx='2px'></ExternalLinkIcon></Link> </Text>
                     </Flex>
@@ -135,7 +138,7 @@ let navigate = useNavigate();
                     <Flex w="full" h="80%" alignItems="center" justifyContent="center" >
                        
                         <form onSubmit={handlesubmit}  >
-                        <Flex  w="20rem" flexDir="column" gap="20px"  >
+                        <Flex  w="20rem" flexDir="column" gap="20px"  p="20px" >
                             <FormControl >
                                 <FormLabel >Gmail</FormLabel>
                                 <Input type="text" onChange={handlegmail}/>
@@ -150,7 +153,7 @@ let navigate = useNavigate();
                                 <FormHelperText>Enter Your Password</FormHelperText>
 
                             </FormControl>
-                            <Input type='submit' bgColor="#00308F"/>
+                            <Input type='submit' _hover={{bgColor:"#00308F", color:"white"}} color={colorMode == "dark" ? "white" : "black"} boxShadow={colorMode == "dark" ? "white" : "1px 1px "}/>
 
                             
 

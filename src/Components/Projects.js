@@ -6,10 +6,11 @@ import ProjectsCard from './ProjectsCard'
 export default function Projects() {
     return (
         <Flex h="full" justifyContent="center" alignItems="center" flexDir="column">
-            <Flex>
-                <Text fontSize="6xl">My Projects</Text>
+            <Flex  mb={{ base: "3rem", md: "8rem", lg: "8rem" }}>
+                <Text fontSize={{ base: "2rem", md: "2rem", lg: "3rem" }}>My Projects</Text>
             </Flex>
-            <Grid templateColumns={{ base: "repeat(1,1fr)", md: "repeat(2,1fr)", lg: "repeat(3,1fr)" }} gap={20} p="7rem">
+        
+            <Grid templateColumns={{ base: "repeat(1,1fr)", md: "repeat(2,1fr)", lg: "repeat(3,1fr)" }} gap={10}  >
                 <ProjectsCard img="./Images/projects/portfolio.jpg" />
                 <ProjectsCard img="./Images/projects/banyancrew.jpg" />
                 <ProjectsCard img="./Images/projects/weather.jpg" />

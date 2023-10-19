@@ -5,7 +5,7 @@ export default function About() {
 
     const { colorMode } = useColorMode()
     return (
-        <Flex id="about" alignItems="center" bgColor={colorMode == "dark" ? "#0d1117" : "white"} flexDir={{ base: 'column', md: 'column', lg: "row" }} h="100%" my="10rem">
+        <Flex id="about" alignItems="center"  flexDir={{ base: 'column', md: 'column', lg: "row" }} h="100%" >
             <Flex w="50%" justifyContent="center"  >
                 <Image src='./Images/about.png' paddingTop="10px" ></Image>
             </Flex>
