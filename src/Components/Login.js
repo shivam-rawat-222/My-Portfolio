@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import ContacForm from './ContacForm'
 import { Flex, Heading, Image , Text } from '@chakra-ui/react'
 import NavBar from './NavBar'
-import { Link } from '@chakra-ui/react'
+import { Link , Button} from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { useNavigate } from 'react-router-dom'
+
 import { useColorMode } from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom';
 
 import {
     FormControl,
@@ -16,9 +17,11 @@ import {
   } from '@chakra-ui/react'
 import { json } from 'react-router-dom'
 export default function Login() {
+    const history = useNavigate();
     const { colorMode } = useColorMode()
     const [Gmail,setGmail] = useState(" ")
     const [password,setpassword] = useState("")
+    const [loading,setloading] = useState("false")
 let navigate = useNavigate();
 
     let handlegmail = (e)=>{
@@ -38,6 +41,7 @@ let navigate = useNavigate();
     }
 
     let handlesubmit = async(e) => {
+       
         e.preventDefault();
      
         
@@ -63,9 +67,10 @@ let navigate = useNavigate();
                 localStorage.setItem("token",token);
                
                 
-                alert("Welcome")
+           
 
-                navigate("/")
+              history("/")
+                window.location.reload();
                 
             } else if(resp.status == 400)
             {
@@ -153,7 +158,12 @@ let navigate = useNavigate();
                                 <FormHelperText>Enter Your Password</FormHelperText>
 
                             </FormControl>
-                            <Input type='submit' _hover={{bgColor:"#00308F", color:"white"}} color={colorMode == "dark" ? "white" : "black"} boxShadow={colorMode == "dark" ? "white" : "1px 1px "}/>
+                            {
+                            loading == "true"? <Button isLoading colorScheme='teal' variant='solid'>Button</Button>
+                            :
+                             <Input type='submit' bgColor="#00308F"/>}
+                            
+ 
 
                             
 
